@@ -1,13 +1,16 @@
 # MarketingCaseStudy
 
 ## OBJECTIVE
-Marketing teams wants to send a personalized email to all the customers of a DVD Rental company. We need to use SQL to generate the required datapoints to populate the emails. 
+
+Marketing teams wants to send a personalized email to all the customers of a DVD Rental company. We need to use SQL to generate the required datapoints to populate the emails.
 
 ## Email
+
 ![image](https://user-images.githubusercontent.com/92747557/142675368-80fd6045-7095-4cc2-a9f2-373512464070.png)
 
-From the email structure above we can extract the following structure.
 ## Structure
+
+From the email structure above we can extract the following structure.
 - `TopCategory`
     - You have watched `TC_mnos` movies
     - That is `TC_avgm` more than the `AVERAGE`
@@ -34,4 +37,4 @@ From the email structure above we can extract the following structure.
         - `customer_id` - represents each individual customer -- each record of this table represents a customer renting a dvd
         - `inventory_id` - foregin key of the inventory table
 
-## 
+##
