@@ -4,17 +4,15 @@
 
 Marketing teams wants to send a personalized email to all the customers of a DVD Rental company. We need to use SQL to generate the required datapoints to populate the emails.
 
-## Email
-
 ![image](https://user-images.githubusercontent.com/92747557/142675368-80fd6045-7095-4cc2-a9f2-373512464070.png)
 
 ## Structure
 
-From the email structure above we can extract the following structure.
+From the email  above we can extract the following structure.
 
 - `TopCategory`
   - You have watched `TC_mnos` movies
-  - That is `TC_avgm` more than the `AVERAGE`
+  - That is `TC_avgd` more than the average
   - That puts you in top `TC_p` percentile
   - Movie Recommendations : `T1`, `T2`, `T3`
 - `SecondCategory`
@@ -25,10 +23,28 @@ From the email structure above we can extract the following structure.
   - You have watched `TA_mnos` movies of this actor
   - Movie Recommendations `A1`, `A2`, `A3`
 
-1. _If there are any ties in top actor - we will select alphabetically_
-2. _All the movie recommendations must be unique_
-3. _All the movie recommendations must be unwatched_
-4. _Raise flag if there is any user with no movie recommendation in any category_
+## Requirments
+
+Based on the structure above we can identify the following requirments
+
+1. Identify top 2 categories `TopCategory` and `SecondCategory` for each customer
+2. Identify top 3 movies for each of the top two categories (`TopCategory`:`T1`, `T2`, `T3`) and (`SecondCategory`:`S1`, `S2`, `S3`)
+   1. The movies must not have been watched by the customer before
+   2. All the movie recommendations must be unique
+   3. Any customer with no recommendations must be flagged
+3. Insights for `TopCategory`
+   1. Total number of movies watched in the category  `TC_mnos`
+   2. Number of movies watched more than average `TC_avgd`_
+   3. Percentile of movie watchers in top category `TC_p`
+4. Insights for `SecondCategory`
+   1. Total number of movies watched in the category `SC_mnos`
+   2. What percent of total viewing history is from this category `SC_pvh`
+5. Identify the top actor `TopActor`
+   1. Identify top 3 movie recommendations for this actor `A1`, `A2`, `A3`
+   2. All movies recommendations must be unique and must be unwatched by the customer
+   3. Any customer with no recommendations must be flagged
+
+
 
 ## Data Exploration
 
@@ -44,6 +60,6 @@ From the email structure above we can extract the following structure.
 ## Approch to the Problem
 
 Looking at the Structure section we can identify the columns we need to have in our final table
-|`customer_id`|`TopCategory`|`TC_mnos`|`TC_avgm`|`TC_p`|`T1`|`T2`|`T3`|`SecondCategory`|`SC_mnos`|`SC_pvh`|`S1`|`S2`|`S3`|`TopActor`|`TA_mnos`|`A1`|`A2`|`A3`|
+|`customer_id`|`TopCategory`|`TC_mnos`|`TC_avgd`|`TC_p`|`T1`|`T2`|`T3`|`SecondCategory`|`SC_mnos`|`SC_pvh`|`S1`|`S2`|`S3`|`TopActor`|`TA_mnos`|`A1`|`A2`|`A3`|
 | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- |
-| X | X | X | X | X | X | X | X | X | X | X | X | X | X | X | X | X | X | X |
+| x | x | x | x | x | x | x | x | x | x | x | x | x | x | x | x | x | x | x |
