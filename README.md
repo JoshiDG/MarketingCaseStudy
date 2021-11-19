@@ -44,26 +44,5 @@ From the email structure above we can extract the following structure.
 ## Approch to the Problem
 
 Looking at the Structure section we can identify the columns we need to have in our final table
-|`customer_id`|`TopCategory`|`TC_mnos`|`TC_avgm`|`TC_p`|`T1`|`T2`|`T3`|`SecondCategory`|`SC_mnos`|`SC_pvh`|`S1`|`S2`|`S3`|`TopActor`|`TA_mnos`|`A1`|`A2`|`A3`
-
+|`customer_id`|`TopCategory`|`TC_mnos`|`TC_avgm`|`TC_p`|`T1`|`T2`|`T3`|`SecondCategory`|`SC_mnos`|`SC_pvh`|`S1`|`S2`|`S3`|`TopActor`|`TA_mnos`|`A1`|`A2`|`A3`|
 | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- |
-
-
-  
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
