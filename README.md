@@ -18,7 +18,11 @@ From the email structure above we can extract the following structure.
 - `TopActor`
     - You have watched `F` films of this actor
     - Movie Recommendations `A1`, `A2`, `A3`
+ 
 _1. If there are any ties in top actor - we will select alphabetically_
+
 _2. All the movie recommendations must be unique_
+
 _3. All the movie recommendations must be unwatched_
+
 _4. Raise flag if there is any user with no movie recommendation in any category_
