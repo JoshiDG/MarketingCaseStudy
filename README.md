@@ -1,11 +1,13 @@
 # MarketingCaseStudy
 
-**OBJECTIVE:** Marketing teams wants to send a personalized email to all the customers of a DVD Rental company. We need to use SQL to generate the required datapoints to populate the emails. 
+## OBJECTIVE
+Marketing teams wants to send a personalized email to all the customers of a DVD Rental company. We need to use SQL to generate the required datapoints to populate the emails. 
 
+## Email
 ![image](https://user-images.githubusercontent.com/92747557/142675368-80fd6045-7095-4cc2-a9f2-373512464070.png)
 
 From the email structure above we can extract the following structure.
-**Structure:**
+## Structure
 - `TopCategory`
     - You have watched `A` filmes
     - That is `B` more than the `AVERAGE`
