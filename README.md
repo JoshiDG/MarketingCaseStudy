@@ -39,7 +39,7 @@ Based on the structure above we can identify the following requirments
 4. Insights for `SecondCategory`
    1. Total number of movies watched in the category `SC_mnos`
    2. What percent of total viewing history is from this category `SC_pvh`
-5. Identify the top actor `TopActor`
+5. Identify the top actor `TopActorID` `TopActorFN`, `TopActorLN`
    1. Identify top 3 movie recommendations for this actor `A1`, `A2`, `A3`
    2. All movies recommendations must be unique and must be unwatched by the customer
    3. Any customer with no recommendations must be flagged
@@ -60,6 +60,7 @@ Based on the structure above we can identify the following requirments
 ## Approch to the Problem
 
 Looking at the Structure section we can identify the columns we need to have in our final table
-|`customer_id`|`TopCategory`|`TC_mnos`|`TC_avgd`|`TC_p`|`T1`|`T2`|`T3`|`SecondCategory`|`SC_mnos`|`SC_pvh`|`S1`|`S2`|`S3`|`TopActor`|`TA_mnos`|`A1`|`A2`|`A3`|
-| ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- |
-| x | x | x | x | x | x | x | x | x | x | x | x | x | x | x | x | x | x | x |
+|`customer_id`|`TopCategory`|`TC_mnos`|`TC_avgd`|`TC_p`|`T1`|`T2`|`T3`|`SecondCategory`|`SC_mnos`|`SC_pvh`|`S1`|`S2`|`S3`|`TopActorID`| `TopActorFN` | `TopActorLN` |`TA_mnos`|`A1`|`A2`|`A3`|
+| ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- |
+| x | x | x | x | x | x | x | x | x | x | x | x | x | x | x | x | x | x | x | x | x |
+
