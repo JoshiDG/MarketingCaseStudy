@@ -115,7 +115,7 @@ By joining with these we can find the `actor_ID`, `ActorFN`, and `ActorLN` value
 The output now looks like 
 
 |`customer_id`|`inventory_id`|`ftitle`|`cname`|`actorid`|`actorfn`|`actorln`|
-| ----------- | ----------- | ----------- | ----------- | ----------- | ----------- |
+| ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- |
 | x | x | x | x | x | x |
 
 ### Analysis table 
@@ -125,5 +125,5 @@ We now have all the information we need to populate the result table. We will in
 The analysis table now looks like
 
 |`customer_id`|`inventory_id`|`ftitle`|`cname`|`actorid`|`actorfn`|`actorln`|
-| ----------- | ----------- | ----------- | ----------- | ----------- | ----------- |
+| ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- |
 | x | x | x | x | x | x |
