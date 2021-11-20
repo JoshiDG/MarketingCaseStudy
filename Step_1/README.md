@@ -1,6 +1,6 @@
-# Step 1 - Finding `TopCategory` and `SecondCategory`
+# Step 1 - Creating the analysis table
 
-In this stop the objective is to find `TopCategory` and `SecondCategory` for each `CustomerID` and insert these 3 values into the result table
+In this step the objective is to crete an analysis table over with all the relevent datapoints over which the airthmatic operations can be performed.
 
 ## Analysis Table
 
@@ -37,7 +37,7 @@ GROUP BY
 	inventory_id
 ORDER BY
 	counta DESC 
-
+------
 SELECT
 	rental_id ,
 	count(inventory_id) AS counta
@@ -70,6 +70,60 @@ WHERE
 		WHERE
 			r.inventory_id = i.inventory_id
 	);
-
-
 ```
+
+#### Joining
+
+Because all the records of the two tables are overlappig we can use left join and inner join interchangebly. Running left join on the table to extract the relevent columns (`customer_id`, `inventory_id`, `film_id`)
+
+The output now looks like
+|`customer_id`|`inventory_id`|`film_id`|
+| ----------- | ----------- | ----------- | 
+| x | x | x |
+
+### output <> `film`
+
+We need to find the corresponding film `titles` as `ftitles` for each `film_id` to include in our result table
+Both hypothesis 1 and 2 are tested for these 2 tables and no discrepencies are found. We will add this column to our output.
+
+The output now looks like
+
+|`customer_id`|`inventory_id`|`film_id`|`ftitle`|
+| ----------- | ----------- | ----------- | ----------- |
+| x | x | x | x |
+
+### output <> `film_category` <> `category`
+
+By left joining these 2 tables we can find the corresponding category names of each film. 
+
+|`customer_id`|`inventory_id`|`film_id`|`ftitle`|`cname`|
+| ----------- | ----------- | ----------- | ----------- | ----------- |
+| x | x | x | x | x |
+
+We can check that all the values of `ftitle` are unique; So there is no need to keep `film_id`.
+
+The output now looks like
+
+|`customer_id`|`inventory_id`|`ftitle`|`cname`|
+| ----------- | ----------- | ----------- | ----------- |
+| x | x | x | x |
+
+### output <> `film_actor` <> `actor`
+
+By joining with these we can find the `actor_ID`, `ActorFN`, and `ActorLN` values
+
+The output now looks like 
+
+|`customer_id`|`inventory_id`|`ftitle`|`cname`|`actorid`|`actorfn`|`actorln`|
+| ----------- | ----------- | ----------- | ----------- | ----------- | ----------- |
+| x | x | x | x | x | x |
+
+### Analysis table 
+
+We now have all the information we need to populate the result table. We will input these datapoints form temporary table to out analysis table `atable`
+
+The analysis table now looks like
+
+|`customer_id`|`inventory_id`|`ftitle`|`cname`|`actorid`|`actorfn`|`actorln`|
+| ----------- | ----------- | ----------- | ----------- | ----------- | ----------- |
+| x | x | x | x | x | x |
